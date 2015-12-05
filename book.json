@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "duoshuo",
+        "todo"
+    ],
+    "pluginsConfig": {
+        "duoshuo": {
+            "short_name": "pqx",
+            "theme": "default"
+        }
+    }
+}
