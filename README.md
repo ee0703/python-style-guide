@@ -11,9 +11,9 @@
 本书还需要不断完善和编辑，欢迎直接评论或者发起issu，也欢迎pull requests。
 
 ## 待完成
-- [ ] 翻译awesome-python
-- [ ] pylint
-- [ ] virtualenv
+- 翻译awesome-python
+- pylint
+- virtualenv
 
 
 ## License
