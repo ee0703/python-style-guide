@@ -10,61 +10,36 @@ PyUnit（The Python unit testing framework) 是 Kent Beck 和 Erich Gamma 所设
 
 这就是我们日常使用的 unittest 。它太过优秀了，以至于我们几乎没有必要再用别的测试框架了。
 
-下面这个例子，借助 requests 测试了一个基于bottle的post和get请求，首先是bottle的代码：
+下面这个例子，是bottle框架下测试首页的简单例子，首先是bottle的代码：
 
 ```python
-from bottle import Bottle
+#!/usr/bin/env python
+# encoding: utf-8
+import bottle
 
 
-app = Bottle()
-
-
-@app.route('/hello', method='GET')
-def hello_world():
-    return 'hello world'
-
-
-@app.route('/test-post', method='POST')
-def login():
-    return 'your post has been accepted'
+@bottle.route('/')
+def index():
+    return 'Hi!'
 
 
 if __name__ == '__main__':
-    run(app, host='0.0.0.0', port=8078, debug=True)
+    bottle.run()
 ```
 
-我们首先要跑起来这个server，这是单元测试的代码：
+这是单元测试的代码：
 
 ```python
-
+#!/usr/bin/env python
+# encoding: utf-8
+import mywebapp
 import unittest
-import requests
 
 
-class RequestsTestCase(unittest.TestCase):
+class TestBottle(unittest.TestCase):
+    def test_webapp_index(self):
+        assert mywebapp.index() == 'Hi!'
 
-    def setUp(self):
-        """Create simple data set with headers."""
-        self.hello_url = 'http://localhost:8078/hello'
-        self.login_url = 'http://localhost:8078/test-post'
-        pass
-
-    def tearDown(self):
-        """Teardown."""
-        pass
-
-    def test_hello_world(self):
-        """test hello world function"""
-        r = requests.get(self.hello_url)
-        self.assertEqual(r.status_code, 200)
-        self.assertEqual(r.text, 'hello world')
-
-    def test_post(self):
-        """test function with post method"""
-        data = {'key1': 'value1', 'key2': 'value2'}
-        r = requests.post(self.login_url, data=data)
-        self.assertEqual(r.status_code, 200)
-        self.assertEqual(r.text, 'your post has been accepted')
 
 if __name__ == '__main__':
     unittest.main()
@@ -78,10 +53,9 @@ if __name__ == '__main__':
 
 ```
 
-
-..
+.
 ----------------------------------------------------------------------
-Ran 2 tests in 0.017s
+Ran 1 test in 0.000s
 
 OK
 ```
@@ -89,13 +63,10 @@ OK
 verbosity模式:
 
 ```
-test_hello_world (__main__.RequestsTestCase)
-test hello world function ... ok
-test_post (__main__.RequestsTestCase)
-test function with post method ... ok
+test_webapp_index (__main__.TestBottle) ... ok
 
 ----------------------------------------------------------------------
-Ran 2 tests in 0.020s
+Ran 1 test in 0.000s
 
 OK
 ```
