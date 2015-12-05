@@ -4,7 +4,6 @@
 >
 > -- <cite>《SICP》</cite>
 
-为了提高代码质量，便于自动测试和部署，我们急需一个统一的、通用的Python代码规范。
 本代码规范基于[PEP8](https://www.python.org/dev/peps/pep-0008/), 在PEP8的基础上做了一些改动。
 
 ## 目的
