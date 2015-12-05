@@ -60,7 +60,7 @@ def main():
 import os
 import sys
 
-# 错误的写法
+# 不推荐的写法
 import sys,os
 
 # 正确的写法
@@ -72,7 +72,7 @@ from subprocess import Popen, PIPE
 # 正确的写法
 from foo.bar import Bar
 
-# 错误的写法
+# 不推荐的写法
 from ..bar import Bar
 ```
 
@@ -116,7 +116,7 @@ x = x * 2 - 1
 hypot2 = x * x + y * y
 c = (a + b) * (a - b)
 
-# 错误的写法
+# 不推荐的写法
 i=i+1
 submitted +=1
 x = x*2 - 1
@@ -131,7 +131,7 @@ c = (a+b) * (a-b)
 def complex(real, imag):
     pass
 
-# 错误的写法
+# 不推荐的写法
 def complex(real,imag):
     pass
 ```
@@ -143,7 +143,7 @@ def complex(real,imag):
 def complex(real, imag=0.0):
     pass
 
-# 错误的写法
+# 不推荐的写法
 def complex(real, imag = 0.0):
     pass
 ```
@@ -154,7 +154,7 @@ def complex(real, imag = 0.0):
 # 正确的写法
 spam(ham[1], {eggs: 2})
 
-# 错误的写法
+# 不推荐的写法
 spam( ham[1], { eggs : 2 } )
 ```
 
@@ -164,7 +164,7 @@ spam( ham[1], { eggs : 2 } )
 # 正确的写法
 dict['key'] = list[index]
 
-# 错误的写法
+# 不推荐的写法
 dict ['key'] = list [index]
 ```
 
@@ -176,7 +176,7 @@ x = 1
 y = 2
 long_variable = 3
 
-# 错误的写法
+# 不推荐的写法
 x             = 1
 y             = 2
 long_variable = 3
@@ -221,7 +221,7 @@ do_first()
 do_second()
 do_third()
 
-# 错误的写法
+# 不推荐的写法
 do_first();do_second();do_third();
 ```
 
@@ -232,7 +232,7 @@ do_first();do_second();do_third();
 if foo == 'blah':
     do_blah_thing()
 
-# 错误的写法
+# 不推荐的写法
 if foo == 'blah': do_blash_thing()
 ```
 
@@ -253,7 +253,7 @@ if foo == 'blah': do_blash_thing()
 # 正确的写法
 x = x + 1  # 边框加粗一个像素
 
-# 错误的写法(无意义的注释)
+# 不推荐的写法(无意义的注释)
 x = x + 1 # x加1
 ```
 

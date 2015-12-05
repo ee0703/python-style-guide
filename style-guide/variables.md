@@ -6,7 +6,7 @@
 
 ```python
 if __name__ == '__main__':
-    # 错误的写法
+    # 不推荐的写法
     # 尽量避免单字符变量名
     s = "hello world!"
 ```
@@ -27,7 +27,7 @@ import htmlParser
 
 ```python
 if __name__ == '__main__':
-    # 错误的写法
+    # 不推荐的写法
     # 尽量避免l、O 等容易混淆的字母
     l = 1
     O = 0

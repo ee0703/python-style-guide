@@ -36,7 +36,7 @@
     {% endraw %}
     ```
 
-    * 错误的静态文件引用方式
+    * 不恰当的静态文件引用方式
 
     ```html
     <img src="/static/img/pic1.jpg" alt="My image"/>

@@ -54,7 +54,7 @@ are also implicitly created anytime a new section starts.
 * 不要在文档注释复制函数定义原型, 而是具体描述其具体内容, 解释具体参数和返回值等
 
 ```python
-#  错误的写法(不要写函数原型等废话)
+#  不推荐的写法(不要写函数原型等废话)
 def function(a, b):
     """function(a, b) -> list"""
     ... ...

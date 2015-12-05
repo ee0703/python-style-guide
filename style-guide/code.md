@@ -5,7 +5,7 @@
 * 尽量不要直接将代码写在模块的顶层中，在执行主程序前应该总是检查 ``if __name__ == '__main__'`` , 这样当模块被导入时主程序就不会被执行.
 
 ```python
-# 错误的写法(裸代码)
+# 不推荐的写法(裸代码)
 do_something()
 
 # 正确的写法
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 * 尽量不要用```+```号拼接字符串, 使用```%s```模板或```join```拼接
 
 ```Python
-# 错误的写法
+# 不推荐的写法
 print("Spam" + " eggs" + " and" + " spam")
 # 正确写法, 使用 join
 print(" ".join(["Spam","eggs","and","spam"]))          
@@ -37,7 +37,7 @@ print("%s %s %s %s" % ("Spam", "eggs", "and", "spam"))
 **注意: 复杂情况下不适用, 列表生成式过复杂反而会导致阅读和调试困难**
 
 ```Python
-# 错误的写法
+# 不推荐的写法
 items = []
 for item in directory:
     items.append(item)
@@ -51,7 +51,7 @@ items = [item for item in directory]
 ```Python
 numbers = [1, 2, 6, 9, 10 ...]
 
-# 错误的写法
+# 不推荐的写法
 def even(numbers):
     evens = []
     for number in numbers:
@@ -76,7 +76,7 @@ regex_phone = re.compile(r'(13\d|14[57]|15[^4,\D]))$')
 * 正则表达式使用前尽量先编译好
 
 ```Python
-# 错误的写法, 不要使用未编译的正则
+# 不推荐的写法, 不要使用未编译的正则
 result = re.match(r'(^(13\d|14[57]|15[^4,\D]))$', my_phone)
 
 # 正确的写法，使用前先编译
