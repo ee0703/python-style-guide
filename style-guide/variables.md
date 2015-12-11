@@ -18,8 +18,8 @@ if __name__ == '__main__':
 import html-parser
 
 # 正确的写法
-# 文件名应为 htmlParser.py
-import htmlParser
+# 文件名应为 html_parser.py
+import html_parser
 ```
 
 * 双下划线开头并结尾的名称(Python保留, 例如\_\_init\_\_)
@@ -50,16 +50,15 @@ if __name__ == '__main__':
 ## 命名约定
 
 ###  模块
-* 模块尽量使用小写命名，首字母保持小写，尽量不要用下划线
+* 模块尽量使用小写命名，首字母保持小写，尽量不要用下划线(除非多个单词，且数量不多的情况)
 
 ```python
 # 正确的模块名
 import decoder
-import htmlParser
-
-# 错误的模块名
-import Decoder
 import html_parser
+
+# 不推荐的模块名
+import Decoder
 ```
 
 ### 类名
